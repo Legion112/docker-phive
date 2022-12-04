@@ -5,7 +5,7 @@ on:
       version:
         description: Which tool version to build
         required: true
-        default: 8
+        default: 0.15.3
         type: string
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
           push: true
           platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
           build-args: |
-            PHP_TAG=${{inputs.version}}
-            base=${{ matrix.php }}
+            VERSION=${{inputs.version}}
+            PHP_TAG=${{ matrix.php }}
           file: build/docker/Dockerfile
           tags: fearofcode/phive:${{ matrix.php }}-${{inputs.version}}
