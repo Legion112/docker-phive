@@ -38,4 +38,4 @@ jobs:
             PHP_TAG=${{inputs.version}}
             base=${{ matrix.php }}
           file: build/docker/Dockerfile
-          tags: fearofcode/phpcov:${{ matrix.php }}-${{inputs.version}}
+          tags: fearofcode/phive:${{ matrix.php }}-${{inputs.version}}
