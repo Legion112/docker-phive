@@ -1,4 +1,5 @@
-FROM php:7.4-cli-alpine
+ARG PHP_TAG=8.1-cli-alpine
+FROM php:$PHP_TAG
 ARG VERSION
 RUN apk --no-cache add gnupg \
   && wget -O phive.phar https://github.com/phar-io/phive/releases/download/$VERSION/phive-$VERSION.phar \
