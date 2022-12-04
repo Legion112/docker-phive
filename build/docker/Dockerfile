@@ -1,6 +1,6 @@
 ARG PHP_TAG=8.1-cli-alpine
 FROM php:$PHP_TAG
-LABEL org.opencontainers.image.url=https://github.com/Legion112/docker-phive/blob/main/build/docker/Dockerfile
+LABEL org.opencontainers.image.url=https://github.com/Legion112/docker-phive
 ARG VERSION
 RUN apk --no-cache add gnupg \
   && wget -O phive.phar https://github.com/phar-io/phive/releases/download/$VERSION/phive-$VERSION.phar \
